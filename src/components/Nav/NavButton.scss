@@ -1,0 +1,14 @@
+.NavButton {
+  cursor: pointer;
+  color: #132F48;
+  opacity: .5;
+
+  transition: opacity linear .2s;
+
+  white-space: nowrap;
+}
+
+.NavButton:hover,
+.NavButton--active {
+  opacity: 1;
+}

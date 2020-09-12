@@ -3,11 +3,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  // flex-wrap: wrap;
 }
 
 .Nav__Item {
   margin-left: 40px;
-  color: #132F48;
 
   &:first-child {
     margin-left: 0;
