@@ -3,7 +3,7 @@
   color: #132F48;
   opacity: .5;
 
-  transition: opacity linear .2s;
+  transition: opacity linear .33s;
 
   white-space: nowrap;
 }
@@ -11,4 +11,8 @@
 .NavButton:hover,
 .NavButton--active {
   opacity: 1;
+}
+
+.NavButton--hidden {
+  opacity: 0;
 }
