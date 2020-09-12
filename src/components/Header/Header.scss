@@ -33,38 +33,38 @@
   margin-bottom: 6px;
 }
 
+.Header--item {
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+
 .Header__Logo {
-  order: 1;
+  position: absolute;
+  left: 0;
 }
 
 .Header__Search {
-  order: 3;
+  position: absolute;
+  right: 148px;
 }
 
 .Header__RegisterButton {
-  margin-left: 20px;
-  order: 4;
-  page-break-after: always;
-  break-after: always;
+  position: absolute;
+  right: 0px;
 }
 
 .Header__Nav {
-  width: 100%;
-  order: 5;
-}
+  position: absolute;
+  left: 0; top: 100px;
+  width: 100%; height: 16px;
 
-.Header__spacer {
-  flex-grow: 2;
-  order: 2;
+  transition: all linear .33s;
 }
 
 .Header--isScrolled {
-  .Header__spacer {
-    display: none;
-  }
   .Header__Nav {
-    width: auto;
-    flex-grow: 2;
-    order: 2;
+    left: 52px; top: 18px;
+    width: 1200 - 26 - 26 - 26 - 36 - 20 - 128px;
   }
 }

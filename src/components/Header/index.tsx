@@ -17,10 +17,9 @@ const Header = ({ scrollPos }) => {
   return (
     <div className="Header">
       <div className={className}>
-        <div className="Header__Logo"><Logo condensed={isScrolled}/></div>
-        <div className="Header__spacer" />
-        <div className="Header__Search"><Search condensed={isScrolled}/></div>
-        <div className="Header__RegisterButton"><RegisterButton /></div>
+        <div className="Header__Logo Header--item"><Logo condensed={isScrolled}/></div>
+        <div className="Header__Search Header--item"><Search condensed={isScrolled}/></div>
+        <div className="Header__RegisterButton Header--item"><RegisterButton /></div>
         <div className="Header__Nav"><Nav /></div>
       </div>
     </div>
