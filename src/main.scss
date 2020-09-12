@@ -1,6 +1,14 @@
 @import "~normalize.css/normalize.css";
 
+.page {
+  position: relative;
+  width: 100vW;
+  height: 100vH;
+}
+
 .container {
+  position: relative;
   margin: 0 auto;
   width: 1200px;
+  height: auto;
 }

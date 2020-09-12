@@ -1,0 +1,18 @@
+.Logo {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.Logo__Text {
+  margin-top: 0px;
+  margin-left: 6px;
+
+  transition: margin linear .33s;
+}
+
+.Logo--condensed {
+  .Logo__Text {
+    margin-top: -90px;
+  }
+}

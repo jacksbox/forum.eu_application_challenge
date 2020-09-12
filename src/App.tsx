@@ -1,13 +1,22 @@
 import React from 'react'
 
-import Header from 'container/Header'
+import classNames from 'classnames'
+
+import withScrollListener from 'HOC/withScrollListener'
+
+import Header from 'components/Header'
 import ContentSection from 'components/ContentSection'
 
 import "main.scss"
 
-const App = () => <div className="container">
-  <Header />
-  <ContentSection />
-</div>
+const App = ({ scrollPos = false }) => {
 
-export default App
+  return (
+    <div className="page">
+        <Header scrollPos={scrollPos} />
+        <ContentSection scrollPos={scrollPos} />
+    </div>
+  )
+}
+
+export default withScrollListener(App)

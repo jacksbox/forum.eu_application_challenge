@@ -1,0 +1,70 @@
+@import '~variables.scss';
+
+.Header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+
+  background: #FFF;
+}
+
+.Header__Container {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 28px auto 25px auto;
+
+  width: 1200px;
+  height: $Header-height;
+  font-family: 'Roboto', sans-serif;
+
+  transition: all linear .33s;
+}
+
+.Header--isScrolled {
+  height: $Header-height--scrolled;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.Header__Logo {
+  order: 1;
+}
+
+.Header__Search {
+  order: 3;
+}
+
+.Header__RegisterButton {
+  margin-left: 20px;
+  order: 4;
+  page-break-after: always;
+  break-after: always;
+}
+
+.Header__Nav {
+  width: 100%;
+  order: 5;
+}
+
+.Header__spacer {
+  flex-grow: 2;
+  order: 2;
+}
+
+.Header--isScrolled {
+  .Header__spacer {
+    display: none;
+  }
+  .Header__Nav {
+    width: auto;
+    flex-grow: 2;
+    order: 2;
+  }
+}

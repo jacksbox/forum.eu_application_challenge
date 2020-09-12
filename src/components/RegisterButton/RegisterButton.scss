@@ -1,0 +1,23 @@
+.RegisterButton {
+  width: 128px;
+  height: 46px;
+  background: #0096FF;
+  box-shadow: 0px 3px 6px #0000001A;
+  border-radius: 54px;
+}
+
+.RegisterButton--inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.RegisterButton__Text {
+  margin-left: 8px;
+}
