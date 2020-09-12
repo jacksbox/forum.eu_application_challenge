@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src", "node_modules"]
+    },
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
