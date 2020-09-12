@@ -34,7 +34,7 @@ const Nav = ({ condensed, availableWidth, occupiedWidth }) => {
       })
       setItems(processedItems)
     }
-  }, [ condensed ])
+  }, [ condensed, availableWidth ])
 
 return (
   <nav className="Nav">

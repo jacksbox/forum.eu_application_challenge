@@ -19,11 +19,15 @@
 
   margin: 28px auto 25px auto;
 
-  width: 1200px;
+  width: 100%;
   height: $Header-height;
   font-family: 'Roboto', sans-serif;
 
   transition: all linear .33s;
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .Header--isScrolled {
