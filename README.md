@@ -2,12 +2,15 @@
 
 ## Run it:
 
-Install dependencies
+#### 1. Install dependencies
 ```
 yarn
 ```
 
-Run the app in dev mode
+#### 2. Run the app in dev mode
 ```
 yarn dev
 ```
+
+#### 3. Access the page
+open [http://localhost:8080](http://localhost:8080) to view the page
