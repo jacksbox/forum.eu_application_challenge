@@ -1,6 +1,8 @@
+@import '~variables.scss';
+
 .RegisterButton {
-  width: 128px;
-  height: 46px;
+  width: $RegisterButton-width;
+  height: $RegisterButton-height;
   background: #0096FF;
   box-shadow: 0px 3px 6px #0000001A;
   border-radius: 54px;

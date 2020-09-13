@@ -1,7 +1,14 @@
+@import '~variables.scss';
+
 .Logo {
   display: flex;
   flex-flow: row;
   align-items: center;
+}
+
+.Logo__Icon img {
+  width: $Logo__Icon-width;
+  height: $Logo__Icon-height;
 }
 
 .Logo__Text {
@@ -9,6 +16,10 @@
   margin-left: 6px;
 
   transition: margin linear .33s;
+  img {
+    width: $Logo__Text-width;
+    height: $Logo__Text-height;
+  }
 }
 
 .Logo--condensed {

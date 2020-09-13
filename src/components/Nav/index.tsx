@@ -4,7 +4,12 @@ import NavButton from './NavButton'
 
 import ArrowIcon from 'assets/arrow-down.svg'
 
+import pxStrToInt from 'helper/pxStrToInt'
+
 import './Nav.scss'
+import styleVariables from 'variables.scss'
+
+const SPACING: number = pxStrToInt(styleVariables.navItemSpacing)
 
 interface IItem {
   content: React.ReacyNode,
@@ -37,8 +42,8 @@ const Nav = ({ condensed, availableWidth, occupiedWidth }: NavProps) => {
   const [items, setItems] = useState<ItemsType>(initItems)
   useEffect(() => {
     let rest: number = condensed ? availableWidth - occupiedWidth : availableWidth
-    const processedItems: ItemsType = items.map((item: IItem) => {
-      rest -= (item.ref.current.clientWidth + 40)
+    const processedItems: ItemsType = items.map((item: IItem, index: number) => {
+      rest -= (item.ref.current.clientWidth + (index > 0 ? SPACING : 0))
       item.hidden = rest < 0
       return item
     })

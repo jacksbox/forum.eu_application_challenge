@@ -16,10 +16,10 @@ const Logo = ({ condensed }: LogoProps) => {
   return (
     <div className={className}>
       <div className="Logo__Icon">
-        <img src={ForumLogoIcon} width="26" height="26"/>
+        <img src={ForumLogoIcon}/>
       </div>
       <div className="Logo__Text">
-        <img src={ForumLogoTextIcon} width="89" height="21" />
+        <img src={ForumLogoTextIcon} />
       </div>
     </div>
   )

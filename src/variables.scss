@@ -1,2 +1,34 @@
 $Header-height: 122px;
 $Header-height--scrolled: 58px;
+
+$Header--item-height: 46px;
+
+$Logo__Icon-width: 26px;
+$Logo__Icon-height: 26px;
+$Logo__Text-width: 89px;
+$Logo__Text-height: 21px;
+
+$Logo__Icon-spacing-right: 26px;
+
+$Search-width: 189px;
+$Search-height: 36px;
+$Search--condensed-spacing-left: 26px;
+$Search--condensed-width: 36px;
+
+$RegisterButton-spacing-left: 20px;
+$RegisterButton-width: 128px;
+$RegisterButton-height: 46px;
+
+$Nav__Item-spacing: 40px;
+
+:export {
+  availableSpace: (
+    $Logo__Icon-width
+    $Logo__Icon-spacing-right
+    $Search--condensed-spacing-left
+    $Search--condensed-width
+    $RegisterButton-spacing-left
+    $RegisterButton-width
+  );
+  navItemSpacing: $Nav__Item-spacing;
+}

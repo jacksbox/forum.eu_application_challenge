@@ -6,10 +6,13 @@ import Search from 'components/Search'
 import RegisterButton from 'components/RegisterButton'
 import Nav from 'components/Nav'
 
-import './Header.scss'
+import pxStrToInt from 'helper/pxStrToInt'
 
-//icon, spacing ||| spacing search spacing button
-const occupiedWidth: number = 26 + 26 + 26 + 36 + 20 + 128;
+import './Header.scss'
+import styleVariables from 'variables.scss'
+
+const occupiedWidth: number = styleVariables.availableSpace.split(' ')
+  .reduce<number>((acc: number, pxStr: number): number =>  acc + pxStrToInt(pxStr), 0)
 
 type HeaderPorps = { scrollPos: number }
 
@@ -37,11 +40,13 @@ const Header = ({ scrollPos }: HeaderPorps) => {
 
   return (
     <div className="Header">
-      <div className={className} ref={headerRef}>
-        <div className="Header__Logo Header--item"><Logo condensed={isScrolled}/></div>
-        <div className="Header__Search Header--item"><Search condensed={isScrolled}/></div>
-        <div className="Header__RegisterButton Header--item"><RegisterButton /></div>
-        <div className="Header__Nav"><Nav condensed={isScrolled} availableWidth={availableWidth} occupiedWidth={occupiedWidth}/></div>
+      <div className="Header--inner">
+        <div className={className} ref={headerRef}>
+          <div className="Header__Logo Header--item"><Logo condensed={isScrolled}/></div>
+          <div className="Header__Search Header--item"><Search condensed={isScrolled}/></div>
+          <div className="Header__RegisterButton Header--item"><RegisterButton /></div>
+          <div className="Header__Nav"><Nav condensed={isScrolled} availableWidth={availableWidth} occupiedWidth={occupiedWidth}/></div>
+        </div>
       </div>
     </div>
   )

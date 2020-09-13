@@ -1,7 +1,9 @@
+@import '~variables.scss';
+
 .Search {
   border-radius: 60px;
   background: #E6ECF0;
-  width: 189px; height: 36px;
+  width: $Search-width; height: $Search-height;
 
   transition: width linear .33s;
 }
@@ -29,7 +31,7 @@
 }
 
 .Search--condensed {
-  width: 36px;
+  width: $Search--condensed-width;
 
 
   .Search__Input {
