@@ -6,10 +6,13 @@ import ForumLogoTextIcon from 'assets/forum-logo-text.svg'
 
 import './Logo.scss'
 
-const Logo = ({ condensed }) => {
-  const className = classNames('Logo', {
+type LogoProps = { condensed: boolean }
+
+const Logo = ({ condensed }: LogoProps) => {
+  const className: string = classNames('Logo', {
     'Logo--condensed': condensed
   })
+
   return (
     <div className={className}>
       <div className="Logo__Icon">

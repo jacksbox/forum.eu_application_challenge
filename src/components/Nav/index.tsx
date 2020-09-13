@@ -6,7 +6,15 @@ import ArrowIcon from 'assets/arrow-down.svg'
 
 import './Nav.scss'
 
-const initItems = [
+interface IItem {
+  content: React.ReacyNode,
+  hidden: boolean,
+  active: boolean,
+  ref: HTMLLIElement
+}
+type ItemsType = IItem[]
+
+const initItems: ItemsType = [
   { content: (<>All A-Z <img src={ArrowIcon} /></>), hidden: false, active: false, ref: createRef()},
   { content: "Brexit", hidden: false, active: false, ref: createRef()},
   { content: "Climate", hidden: false, active: false, ref: createRef()},
@@ -19,11 +27,17 @@ const initItems = [
   { content: "Debate A", hidden: false, active: false, ref: createRef()},
 ]
 
-const Nav = ({ condensed, availableWidth, occupiedWidth }) => {
-  const [items, setItems] = useState(initItems)
+type NavProps = {
+  condensed: boolean,
+  availableWidth: number,
+  occupiedWidth: number
+}
+
+const Nav = ({ condensed, availableWidth, occupiedWidth }: NavProps) => {
+  const [items, setItems] = useState<ItemsType>(initItems)
   useEffect(() => {
-    let rest = condensed ? availableWidth - occupiedWidth : availableWidth
-    const processedItems = items.map(item => {
+    let rest: number = condensed ? availableWidth - occupiedWidth : availableWidth
+    const processedItems: ItemsType = items.map((item: IItem) => {
       rest -= (item.ref.current.clientWidth + 40)
       item.hidden = rest < 0
       return item
@@ -34,7 +48,7 @@ const Nav = ({ condensed, availableWidth, occupiedWidth }) => {
 return (
   <nav className="Nav">
     <ul className="Nav__List">
-      {items.map(({ content, active, hidden, ref }) => {
+      {items.map(({ content, active, hidden, ref }: IItem) => {
         return (
           <li className="Nav__Item" ref={ref} key={content}>
             <NavButton active={active} hidden={hidden}>{content}</NavButton>

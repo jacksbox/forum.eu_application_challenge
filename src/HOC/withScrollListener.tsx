@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react'
 
-const withScrollListener = (WrappedComponent) => {
-  const ScrollListener = props => {
-    const [scrollPos, setScrollPos] = useState(window.pageYOffset)
+const withScrollListener = (WrappedComponent: React.ReactNode) => {
+  const ScrollListener = (props: any) => {
+    const [scrollPos, setScrollPos] = useState<number>(window.pageYOffset)
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll)
@@ -13,7 +13,7 @@ const withScrollListener = (WrappedComponent) => {
     }, [])
 
     const handleScroll = async () => {
-      const pos = window.pageYOffset
+      const pos: number = window.pageYOffset
       setScrollPos(pos)
     }
 

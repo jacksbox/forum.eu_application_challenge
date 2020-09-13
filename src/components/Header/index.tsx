@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import classNames from "classnames"
 
 import Logo from 'components/Logo'
@@ -9,18 +9,20 @@ import Nav from 'components/Nav'
 import './Header.scss'
 
 //icon, spacing ||| spacing search spacing button
-const occupiedWidth = 26 + 26 + 26 + 36 + 20 + 128;
+const occupiedWidth: number = 26 + 26 + 26 + 36 + 20 + 128;
 
-const headerRef = createRef()
+type HeaderPorps = { scrollPos: number }
 
-const Header = ({ scrollPos }) => {
-  const [availableWidth, setAvailableWidth] = useState(0)
-  const isScrolled = scrollPos > 0
-  const className = classNames("Header__Container", {
+const Header = ({ scrollPos }: HeaderPorps) => {
+  const [availableWidth, setAvailableWidth] = useState<number>(0)
+
+  const isScrolled: boolean = scrollPos > 0
+  const headerRef = useRef<HTMLElement | null>()
+  const className: string = classNames("Header__Container", {
     "Header--isScrolled": isScrolled
   })
 
-  const handleResize = () => {
+  const handleResize: () => void = () => {
     setAvailableWidth(headerRef.current.clientWidth)
   }
 

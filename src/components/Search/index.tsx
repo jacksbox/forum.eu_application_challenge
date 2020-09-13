@@ -5,8 +5,10 @@ import SearchIcon from 'assets/search.svg'
 
 import './Search.scss'
 
-const Search = ({ condensed = false }) => {
-  const className = classNames("Search", {
+type SearchProps = { condensed: boolean }
+
+const Search = ({ condensed = false }: SearchProps) => {
+  const className: string = classNames("Search", {
     "Search--condensed": condensed
   })
   return (
