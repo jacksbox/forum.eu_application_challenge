@@ -22,7 +22,7 @@ const Header = ({ scrollPos }: HeaderPorps) => {
     "Header--isScrolled": isScrolled
   })
 
-  const handleResize: () => void = () => {
+  const handleResize = (): void => {
     setAvailableWidth(headerRef.current.clientWidth)
   }
 
