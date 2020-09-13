@@ -1,6 +1,6 @@
 {
   "name": "forum.eu_application_challenge",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Application challenge for the forum.eu project",
   "main": "src/index.ts",
   "scripts": {
