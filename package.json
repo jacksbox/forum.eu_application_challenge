@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn webpack --mode production",
-    "dev": "yarn webpack-dev-server --hot"
+    "dev": "yarn webpack-dev-server --hot",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
